@@ -3,35 +3,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".loginActivity">
+    tools:context=".LogActivity">
 
     <EditText
-        android:id="@+id/logMail"
+        android:id="@+id/inpMail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:hint="Type your email"
+        android:layout_centerVertical="true"
+        android:hint="Type you email"
         android:textSize="30sp"
         android:textStyle="bold" />
 
     <EditText
-
-        android:id="@+id/logPass"
+        android:id="@+id/inpPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logMail"
-        android:layout_centerInParent="true"
-        android:hint="Type your password"
+        android:layout_below="@id/inpMail"
+        android:layout_centerVertical="true"
+        android:hint="Type you password"
         android:textSize="30sp"
         android:textStyle="bold" />
 
     <Button
+        android:id="@+id/btnLog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
         android:text="LOGIN" />
-
-
 </RelativeLayout>

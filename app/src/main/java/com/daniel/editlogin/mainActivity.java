@@ -15,6 +15,7 @@ public class mainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView txtLastName;
     private TextView txtEmail;
     private TextView txtPhone;
+    private Button btnLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,9 @@ public class mainActivity extends AppCompatActivity implements View.OnClickListe
         txtLastName = findViewById(R.id.lastName);
         txtEmail = findViewById(R.id.email);
         txtPhone = findViewById(R.id.phone);
+        btnLogout = findViewById(R.id.btnLogout);
         btnEdit.setOnClickListener(this);
+        btnLogout.setOnClickListener(this);
         load();
 
     }
@@ -36,6 +39,8 @@ public class mainActivity extends AppCompatActivity implements View.OnClickListe
         if (v.getId() == R.id.btnEdit) {
             Intent intent = new Intent(this, editInfoActivity.class);
             startActivityForResult(intent, 1);
+        }else if(v.getId() == R.id.btnLogout){
+            super.onBackPressed();
         }
     }
 
